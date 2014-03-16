@@ -1,0 +1,3 @@
+[submodule "vim-vala"]
+	path = contrib/vim-vala
+	url = https://github.com/tkztmk/vim-vala

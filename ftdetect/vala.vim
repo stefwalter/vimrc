@@ -1,0 +1,1 @@
+../contrib/vim-vala/ftdetect/vala.vim
