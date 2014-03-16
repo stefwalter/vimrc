@@ -1,5 +1,6 @@
-set makeprg=vim-make
-set grepprg=vim-grep
+syntax on
+set makeprg=~/.vim/bin/vim-make
+set grepprg=~/.vim/bin/vim-grep
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 colorscheme slate
@@ -18,4 +19,4 @@ nnoremap <C-S-Tab> :bprevious<CR>
 
 " vala stuff
 let vala_space_errors = 1
-set erroformat .= %f:%1.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
+set errorformat+=%f:%1.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m

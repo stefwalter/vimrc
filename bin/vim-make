@@ -1,0 +1,2 @@
+#/bin/bash
+make $(cat .make-opts) -s $@ |& sed "s#^\.\./##g"

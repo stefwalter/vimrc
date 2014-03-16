@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -d '.git' ]; then
+	exec git grep -n "$@"
+else
+	exec grep -n "$@"
+fi
