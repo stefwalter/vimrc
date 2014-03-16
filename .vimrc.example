@@ -1,0 +1,8 @@
+"cp .vimrc.example ~/.vimrc
+
+source ~/.vim/vimrc
+if has("gui_running")
+	source ~/.vim/gvimrc
+	
+	set lines=55
+endif
