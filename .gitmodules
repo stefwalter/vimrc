@@ -1,3 +1,6 @@
 [submodule "vim-vala"]
 	path = contrib/vim-vala
 	url = https://github.com/tkztmk/vim-vala
+[submodule "contrib/vim-gitgutter"]
+	path = contrib/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
