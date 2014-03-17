@@ -1,21 +1,24 @@
 syntax on
-set makeprg=~/.vim/bin/vim-make
-set grepprg=~/.vim/bin/vim-grep
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 colorscheme slate
 set number
-set lines=55
 set columns=120
 set exrc
 filetype on
 filetype plugin on
 filetype indent on
 set secure
-match Error /\s\+$/
 
 nnoremap <C-Tab> :bnext<CR>
 nnoremap <C-S-Tab> :bprevious<CR>
+
+let g:netrw_list_hide= '.*\.swp$,^\..*'
+let g:netrw_liststyle=3
+
+let $PATH=$PATH . ':~/.vim/bin'
+set makeprg=vim-make
+set grepprg=vim-grep
 
 function! GlobalHighlights()
 	call matchadd('Todo', '\s\+$', -1)
