@@ -1,3 +1,4 @@
 .netrw*
 .Vimball*
 *.swp
+/doc/tags
