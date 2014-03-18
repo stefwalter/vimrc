@@ -16,6 +16,9 @@ nnoremap <C-S-Tab> :bprevious<CR>
 let g:netrw_list_hide= '.*\.swp$,^\..*'
 let g:netrw_liststyle=3
 
+"enable airline status bar
+set laststatus=2
+
 let $PATH=$PATH . ':~/.vim/bin'
 set makeprg=vim-make
 set grepprg=vim-grep
