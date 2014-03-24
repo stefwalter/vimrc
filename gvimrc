@@ -28,7 +28,7 @@ function! GlobalHighlights()
 endfunction
 autocmd Syntax * call GlobalHighlights()
 
-function! StefIndent()
+function! StefFormat()
 	setlocal noexpandtab
 	setlocal copyindent
 	setlocal preserveindent
@@ -36,13 +36,21 @@ function! StefIndent()
 	setlocal cinoptions=L0,:0,l1,g0,t0,(0,u0,w1,m1
 endfunction
 
-function! GnuIndent()
+function! GnuFormat()
         setlocal softtabstop=2
         setlocal expandtab
         setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
         setlocal shiftwidth=2
+	call matchadd('Todo', '\t')
         match Todo /\t/
 endfunction
+
+function! MakeFormat()
+	setlocal noexpandtab
+	call matchadd('Todo', '^ \+')
+endfunction
+
+autocmd FileType make,automake call MakeFormat()
 
 " vala stuff
 let vala_space_errors = 1
