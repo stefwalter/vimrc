@@ -1,4 +1,4 @@
-au FileType c,cpp call GnuFormat()
+au BufEnter,BufRead *.c,*.h call GnuFormat()
 
 function! JavascriptFormat()
 	setlocal softtabstop=4

@@ -23,11 +23,6 @@ let $PATH=$PATH . ':~/.vim/bin'
 set makeprg=vim-make
 set grepprg=vim-grep
 
-function! GlobalHighlights()
-	call matchadd('Todo', '\s\+$', -1)
-endfunction
-autocmd Syntax * call GlobalHighlights()
-
 function! StefFormat()
 	setlocal noexpandtab
 	setlocal copyindent
@@ -41,18 +36,19 @@ function! GnuFormat()
         setlocal expandtab
         setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
         setlocal shiftwidth=2
-	call matchadd('Todo', '\t')
-        match Todo /\t/
+	syntax match Todo /\t/
 endfunction
 
-function! MakeFormat()
+function! AutomakeFormat()
 	setlocal noexpandtab
-	call matchadd('Todo', '^ \+')
+	setlocal syntax=automake
+        syntax match Todo /^ \+/
 endfunction
+autocmd BufEnter,BufRead *.am call AutomakeFormat()
 
-autocmd FileType make,automake call MakeFormat()
 
 " vala stuff
 let vala_space_errors = 1
 set errorformat+=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 
+let c_space_errors = 1
