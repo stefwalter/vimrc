@@ -15,3 +15,10 @@ function! PythonFormat()
 endfunction
 
 au FileType python call PythonFormat()
+
+function! XmlFormat()
+	setlocal softtabstop=2
+	setlocal expandtab
+	setlocal shiftwidth=2
+endfunction
+au FileType xml,docbk call XmlFormat()
