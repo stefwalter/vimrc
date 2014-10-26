@@ -52,6 +52,8 @@ function! AutomakeFormat()
 endfunction
 autocmd BufEnter,BufRead *.am call AutomakeFormat()
 
+" shell stuff
+highlight shDeref guibg=background
 
 " vala stuff
 let vala_space_errors = 1

@@ -22,3 +22,11 @@ function! XmlFormat()
 	setlocal shiftwidth=2
 endfunction
 au FileType xml,docbk call XmlFormat()
+
+function! ShFormat()
+	setlocal softtabstop=4
+	setlocal expandtab
+	setlocal shiftwidth=4
+	setlocal tabstop=4
+endfunction
+au FileType sh call ShFormat()
