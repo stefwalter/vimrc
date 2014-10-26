@@ -1,6 +1,12 @@
 syntax on
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
+
+" Highlight trailing spaces, needs to come before general colorscheme
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
+
 colorscheme slate
 set number
 set columns=120
