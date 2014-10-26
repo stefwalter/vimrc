@@ -13,7 +13,6 @@ function! PythonFormat()
 	setlocal shiftwidth=4
 	setlocal tabstop=4
 endfunction
-
 au FileType python call PythonFormat()
 
 function! XmlFormat()
