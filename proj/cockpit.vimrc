@@ -29,3 +29,10 @@ function! ShFormat()
 	setlocal tabstop=4
 endfunction
 au FileType sh call ShFormat()
+
+function! CssFormat()
+	setlocal softtabstop=4
+	setlocal expandtab
+	setlocal shiftwidth=4
+endfunction
+au FileType css call CssFormat()
