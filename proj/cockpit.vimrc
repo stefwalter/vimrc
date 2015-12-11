@@ -35,4 +35,4 @@ function! CssFormat()
 	setlocal expandtab
 	setlocal shiftwidth=4
 endfunction
-au FileType css call CssFormat()
+au FileType less,css call CssFormat()
