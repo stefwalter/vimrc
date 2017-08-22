@@ -31,8 +31,11 @@ endfunction
 au FileType sh call ShFormat()
 
 function! CssFormat()
+	setlocal syntax=css
 	setlocal softtabstop=4
 	setlocal expandtab
 	setlocal shiftwidth=4
 endfunction
-au FileType less,css call CssFormat()
+au FileType css call CssFormat()
+au BufEnter,BufRead *.less call CssFormat()
+
