@@ -4,8 +4,10 @@ function! JavascriptFormat()
 	setlocal softtabstop=4
 	setlocal expandtab
 	setlocal shiftwidth=4
+	setlocal syntax=javascript
 endfunction
 au FileType html,javascript call JavascriptFormat()
+au BufEnter,BufRead *.es6,*.jsx call JavascriptFormat()
 
 function! PythonFormat()
 	setlocal softtabstop=4
